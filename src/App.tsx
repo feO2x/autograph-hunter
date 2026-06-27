@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { questions } from './questions'
 import { hashSeed, mulberry32, shuffle, randomSeed } from './random'
+import Sprig from './Sprig'
 import './App.css'
 
 const QUESTIONS_PER_SHEET = 16
@@ -61,22 +62,41 @@ function App() {
       <main className="sheets">
         {sheets.map((sheet, i) => (
           <article key={i} className="sheet">
-            <header className="sheet-header">
-              <h1 className="sheet-title">Hochzeits-Autogrammjagd</h1>
-              <p className="sheet-sub">Wildniscamp am Falkenstein</p>
-            </header>
-            <div className="sheet-divider">
-              <span className="sheet-divider-mark">❧</span>
+            <div className="sheet-frame">
+              <header className="sheet-header">
+                <Sprig className="sheet-sprig" />
+                <p className="sheet-eyebrow">Hochzeit · Maike &amp; Kenny</p>
+                <h1 className="sheet-title">Autogrammjagd</h1>
+                <p className="sheet-sub">Wildniscamp am Falkenstein</p>
+              </header>
+
+              <div className="sheet-body">
+                <p className="sheet-instr">
+                  Finde zur jeweiligen Beschreibung eine passende Person auf der
+                  Hochzeit und lass dir ihr Autogramm geben.
+                </p>
+                <ol className="grid">
+                  {sheet.map((q, j) => (
+                    <li key={j} className="item">
+                      <span className="item-num">{j + 1}</span>
+                      <div className="item-content">
+                        <span className="item-text">{q}</span>
+                        <span className="signature" />
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+
+              <footer className="sheet-footer">
+                <span className="footer-rule" />
+                <span className="footer-mark">
+                  Blatt {i + 1} <span className="footer-of">/</span>{' '}
+                  {sheets.length}
+                </span>
+                <span className="footer-rule" />
+              </footer>
             </div>
-            <div className="sheet-meta">Blatt {i + 1} / {sheets.length}</div>
-            <ol className="grid">
-              {sheet.map((q, j) => (
-                <li key={j} className="item">
-                  <span className="item-text">{q}</span>
-                  <span className="signature" />
-                </li>
-              ))}
-            </ol>
           </article>
         ))}
       </main>
