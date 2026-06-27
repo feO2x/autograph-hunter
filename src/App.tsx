@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import { questions } from './questions'
-import { hashSeed, mulberry32, shuffle, randomSeed } from './random'
+import { hashSeed, mulberry32, shuffle } from './random'
 import Sprig from './Sprig'
 import './App.css'
 
@@ -8,14 +8,37 @@ const QUESTIONS_PER_SHEET = 16
 
 function buildSheets(seed: string, count: number): string[][] {
   const rng = mulberry32(hashSeed(seed))
-  return Array.from({ length: count }, () =>
-    shuffle(questions, rng).slice(0, QUESTIONS_PER_SHEET),
-  )
+  const sheets: string[][] = Array.from({ length: count }, () => [])
+
+  // Phase 1: round-robin all questions to guarantee every one appears
+  const order = shuffle(questions, rng)
+  for (let i = 0; i < order.length; i++) {
+    sheets[i % count].push(order[i])
+  }
+
+  // Phase 2: fill remaining slots, no duplicates within a sheet
+  for (const sheet of sheets) {
+    const used = new Set(sheet)
+    for (const q of shuffle(questions, rng)) {
+      if (sheet.length >= QUESTIONS_PER_SHEET) break
+      if (!used.has(q)) {
+        sheet.push(q)
+        used.add(q)
+      }
+    }
+  }
+
+  // Shuffle each sheet so guaranteed questions aren't always first
+  for (let i = 0; i < sheets.length; i++) {
+    sheets[i] = shuffle(sheets[i], rng)
+  }
+
+  return sheets
 }
 
 function App() {
   const [sheetCount, setSheetCount] = useState(40)
-  const [seed, setSeed] = useState(() => randomSeed())
+  const [seed, setSeed] = useState('Hochzeit')
 
   const sheets = useMemo(() => buildSheets(seed, sheetCount), [seed, sheetCount])
 
@@ -46,9 +69,6 @@ function App() {
               onChange={(e) => setSeed(e.target.value)}
             />
           </label>
-          <button type="button" onClick={() => setSeed(randomSeed())}>
-            Neu mischen
-          </button>
           <button
             type="button"
             className="primary"
@@ -75,8 +95,9 @@ function App() {
 
               <div className="sheet-body">
                 <p className="sheet-instr">
-                  Finde jeweils eine passende Person auf der
-                  Hochzeit und lass dir von ihr ein Autogramm geben.
+                  Finde zu jeder Beschreibung eine passende Person auf der
+                  Hochzeit und lass dir von ihr ein Autogramm geben. Jede Person
+                  darf auf diesem Blatt nur einmal unterschreiben.
                 </p>
                 <ol className="grid">
                   {sheet.map((q, j) => (
