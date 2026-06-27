@@ -1,35 +1,26 @@
 :root {
-  --text: #1a1a1a;
+  --text: #2b2118;
   --bg: #ffffff;
   --muted: #6b6375;
-  --accent: #aa3bff;
-  --border: #e5e4e7;
-  --toolbar-bg: #f7f6f9;
-  --toolbar-border: #e5e4e7;
+  --accent: #4a6741;
+  --accent-soft: #7d9b6f;
+  --border: #d8d2c5;
+  --paper: #fbf9f4;
+  --toolbar-bg: #f3f0e9;
+  --toolbar-border: #d8d2c5;
 
+  --serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua',
+    Georgia, serif;
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
 
-  font: 18px/1.5 var(--sans);
-  color-scheme: light dark;
+  font: 16px/1.5 var(--sans);
+  color-scheme: light;
   color: var(--text);
   background: var(--bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #f3f4f6;
-    --bg: #16171d;
-    --muted: #9ca3af;
-    --accent: #c084fc;
-    --border: #2e303a;
-    --toolbar-bg: #1f2028;
-    --toolbar-border: #2e303a;
-  }
 }
 
 * {
@@ -55,7 +46,7 @@ body {
 }
 
 .toolbar-inner {
-  max-width: 720px;
+  max-width: 760px;
   margin: 0 auto;
   padding: 12px 24px;
   display: flex;
@@ -64,11 +55,20 @@ body {
   gap: 12px;
 }
 
+.toolbar-title {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-right: auto;
+  align-self: center;
+}
+
 .field {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  font-size: 13px;
+  font-size: 12px;
   color: var(--muted);
 }
 
@@ -115,7 +115,7 @@ button.primary:hover {
 /* ---------- Sheets ---------- */
 
 .sheets {
-  max-width: 720px;
+  max-width: 760px;
   margin: 0 auto;
   padding: 24px;
   display: flex;
@@ -125,63 +125,104 @@ button.primary:hover {
 
 .sheet {
   aspect-ratio: 210 / 297;
-  background: var(--bg);
+  background: var(--paper);
   border: 1px solid var(--border);
   border-radius: 6px;
-  padding: 18mm 16mm;
+  padding: 16mm 14mm;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
 .sheet-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  border-bottom: 2px solid var(--accent);
-  padding-bottom: 6px;
-  margin-bottom: 12px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
-.sheet-header h1 {
-  margin: 0;
-  font-size: 22px;
-  font-weight: 600;
+.sheet-title {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 700;
   color: var(--accent);
+  margin: 0;
+  letter-spacing: 0.2px;
 }
 
-.sheet-number {
-  font-size: 13px;
+.sheet-sub {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 12px;
+  color: var(--accent-soft);
+  margin: 2px 0 0;
+}
+
+.sheet-divider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0 12px;
+  color: var(--accent-soft);
+}
+
+.sheet-divider::before,
+.sheet-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+}
+
+.sheet-divider-mark {
+  font-size: 12px;
+}
+
+.sheet-meta {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 11px;
   color: var(--muted);
+  margin-bottom: 6px;
 }
 
 .grid {
   margin: 0;
   padding: 0;
-  list-style: decimal;
+  list-style: none;
   flex: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(8, 1fr);
   grid-auto-flow: column;
-  gap: 4px 16px;
+  gap: 6px 18px;
+  counter-reset: item;
 }
 
 .item {
-  break-inside: avoid;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  padding-top: 2px;
+  gap: 10px;
+  break-inside: avoid;
+  counter-increment: item;
 }
 
 .item-text {
+  font-family: var(--serif);
   font-size: 12px;
   line-height: 1.3;
+  display: flex;
+  gap: 6px;
+}
+
+.item-text::before {
+  content: counter(item) '.';
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
 }
 
 .signature {
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px dotted var(--border);
   height: 0;
 }
 
@@ -189,16 +230,22 @@ button.primary:hover {
 
 @page {
   size: A4;
-  margin: 12mm;
+  margin: 0;
 }
 
 @media print {
-  .toolbar {
-    display: none;
+  html,
+  body {
+    background: #fff !important;
   }
 
-  body {
-    background: #fff;
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .toolbar {
+    display: none !important;
   }
 
   .sheets {
@@ -209,22 +256,19 @@ button.primary:hover {
 
   .sheet {
     aspect-ratio: auto;
+    width: 210mm;
+    height: 297mm;
     border: none;
     border-radius: 0;
-    padding: 0;
+    box-shadow: none;
+    background: #fff;
     break-after: page;
     page-break-after: always;
+    break-inside: avoid;
   }
 
   .sheet:last-child {
     break-after: auto;
     page-break-after: auto;
-  }
-
-  :root {
-    --text: #000;
-    --muted: #555;
-    --accent: #000;
-    --border: #999;
   }
 }

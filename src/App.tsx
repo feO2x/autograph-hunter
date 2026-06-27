@@ -22,6 +22,7 @@ function App() {
     <>
       <div className="toolbar">
         <div className="toolbar-inner">
+          <span className="toolbar-title">Hochzeits-Autogrammjagd</span>
           <label className="field">
             <span>Blätter</span>
             <input
@@ -30,7 +31,9 @@ function App() {
               max={500}
               value={sheetCount}
               onChange={(e) =>
-                setSheetCount(Math.max(1, Math.min(500, Number(e.target.value) || 1)))
+                setSheetCount(
+                  Math.max(1, Math.min(500, Number(e.target.value) || 1)),
+                )
               }
             />
           </label>
@@ -45,7 +48,11 @@ function App() {
           <button type="button" onClick={() => setSeed(randomSeed())}>
             Neu mischen
           </button>
-          <button type="button" className="primary" onClick={() => window.print()}>
+          <button
+            type="button"
+            className="primary"
+            onClick={() => window.print()}
+          >
             Drucken
           </button>
         </div>
@@ -55,9 +62,13 @@ function App() {
         {sheets.map((sheet, i) => (
           <article key={i} className="sheet">
             <header className="sheet-header">
-              <h1>Autograph Hunter</h1>
-              <span className="sheet-number">Blatt {i + 1}</span>
+              <h1 className="sheet-title">Hochzeits-Autogrammjagd</h1>
+              <p className="sheet-sub">Wildniscamp am Falkenstein</p>
             </header>
+            <div className="sheet-divider">
+              <span className="sheet-divider-mark">❧</span>
+            </div>
+            <div className="sheet-meta">Blatt {i + 1} / {sheets.length}</div>
             <ol className="grid">
               {sheet.map((q, j) => (
                 <li key={j} className="item">
