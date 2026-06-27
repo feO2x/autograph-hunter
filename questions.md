@@ -12,7 +12,7 @@
 - Finde jemanden, der mit Kenny und Maike gemeinsam einen Spieleabend gemacht hat.
 - Finde jemanden, der mit Maike und Kenny schon einmal gemeinsam ein Krimi-Dinner gemacht hat.
 - Finde jemanden, der mit Kenny und Maike zusammen essen gegangen ist in einem Restaurant.
-- Finde jemanden, der in Sachsen geboren ist.
+- Finde jemanden, der in Sachsen geboren wurde.
 - Finde jemanden, der eine weitere Anreise als 400 km hat.
 - Finde jemanden, der mit Maike und Kenny schon gemeinsam wandern war.
 - Finde jemanden, der einen von beiden schon über 20 Jahre kennt.
@@ -24,7 +24,6 @@
 - Finde jemanden, der mit Maike und Kenny schon gemeinsam auf dem Spielplatz war.
 - Finde jemanden, der mit Maike schon mal Yoga gemacht hat.
 - Finde jemanden, der schon einmal auf dem Falkenstein war.
-- Finde jemanden, der bei TELIS arbeitet.
 - Finde jemanden, der in der Softwarebranche arbeitet.
 - Finde jemanden, der schon mit Kenny und Maike auf der Dult war.
 - Finde jemanden, der gern Metal Musik hört.
