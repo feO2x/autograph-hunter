@@ -6,7 +6,7 @@
 - Finde jemanden, der dieses Jahr schon mal ein Instrument gespielt hat.
 - Finde jemanden, der schon mal mit Kenny zusammen Software geschrieben hat.
 - Finde jemanden, der mit Maike und Kenny gemeinsam schon mal Silvester gefeiert hat.
-- Finde jemanden, aus Maikes Familie, der noch keine zehn Jahre alt ist.
+- Finde jemanden aus Maikes Familie, der noch keine zehn Jahre alt ist.
 - Finde jemanden, der mit Maike gemeinsam studiert hat.
 - Finde jemanden, der mit Maike schon mal einen Ausritt gemacht hat.
 - Finde jemanden, der mit Kenny und Maike gemeinsam einen Spieleabend gemacht hat.
@@ -25,11 +25,11 @@
 - Finde jemanden, der mit Maike schon mal Yoga gemacht hat.
 - Finde jemanden, der schon einmal auf dem Falkenstein war.
 - Finde jemanden, der bei TELIS arbeitet.
-- Finde jemanden, der in der Sofwarebranche arbeitet.
+- Finde jemanden, der in der Softwarebranche arbeitet.
 - Finde jemanden, der schon mit Kenny und Maike auf der Dult war.
 - Finde jemanden, der gern Metal Musik hört.
 - Finde jemanden, mit dem Kenny schon einmal Whiskey getrunken hat.
-- Finde jemanden, der schon mal mit in der Dübener Heide auf dem Zeltplatz war.
+- Finde jemanden, der schon mal in der Dübener Heide auf dem Zeltplatz war.
 - Finde jemanden, der mit Maike Marmelade eingekocht hat.
 - Finde jemanden, der mit Maike schon mal im Garten gearbeitet hat.
 - Finde jemanden, der Kenny und Maike schon mal in der Würzburger Straße besucht hat.
