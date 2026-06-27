@@ -67,13 +67,16 @@ function App() {
                 <Sprig className="sheet-sprig" />
                 <p className="sheet-eyebrow">Hochzeit · Maike &amp; Kenny</p>
                 <h1 className="sheet-title">Autogrammjagd</h1>
-                <p className="sheet-sub">Wildniscamp am Falkenstein</p>
+                <p className="sheet-name">
+                  <span className="sheet-name-label">Name</span>
+                  <span className="sheet-name-line" />
+                </p>
               </header>
 
               <div className="sheet-body">
                 <p className="sheet-instr">
-                  Finde zur jeweiligen Beschreibung eine passende Person auf der
-                  Hochzeit und lass dir ihr Autogramm geben.
+                  Finde jeweils eine passende Person auf der
+                  Hochzeit und lass dir von ihr ein Autogramm geben.
                 </p>
                 <ol className="grid">
                   {sheet.map((q, j) => (

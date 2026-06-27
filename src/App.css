@@ -12,11 +12,9 @@
   --toolbar-bg: #f3f0e9;
   --toolbar-border: #d8d2c5;
 
-  --serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua',
-    Georgia, serif;
-  --display: 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua',
-    Georgia, serif;
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --serif: var(--sans);
+  --display: var(--sans);
 
   font: 16px/1.5 var(--sans);
   color-scheme: light;
@@ -147,46 +145,24 @@ button.primary:hover {
   border: 1.5px solid var(--accent);
   outline: 0.5px solid var(--accent);
   outline-offset: 4px;
-  padding: 9mm 9mm 7mm;
+  padding: 6mm 9mm 6mm;
   display: flex;
   flex-direction: column;
   position: relative;
-}
-
-.sheet-frame::before,
-.sheet-frame::after {
-  content: '';
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border: 1.5px solid var(--accent-soft);
-  background: var(--paper);
-  border-radius: 1px;
-  transform: rotate(45deg);
-}
-
-.sheet-frame::before {
-  top: -6px;
-  left: -6px;
-}
-
-.sheet-frame::after {
-  bottom: -6px;
-  right: -6px;
 }
 
 /* ---------- Header ---------- */
 
 .sheet-header {
   text-align: center;
-  margin-bottom: 6mm;
+  margin-bottom: 4mm;
 }
 
 .sheet-sprig {
   width: 84px;
   height: 30px;
   color: var(--accent-soft);
-  margin: 0 auto 6px;
+  margin: 0 auto 4px;
   display: block;
 }
 
@@ -211,12 +187,38 @@ button.primary:hover {
 }
 
 .sheet-sub {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-style: italic;
   font-size: 13px;
   color: var(--accent-soft);
-  margin: 6px 0 0;
+  margin: 14px 0 0;
   letter-spacing: 0.3px;
+}
+
+.sheet-name {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  margin: 22px auto 0;
+  max-width: 60%;
+  min-height: 22px;
+}
+
+.sheet-name-label {
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  flex-shrink: 0;
+  padding-bottom: 2px;
+}
+
+.sheet-name-line {
+  flex: 1;
+  border-bottom: 1px solid var(--accent-soft);
+  height: 22px;
 }
 
 /* ---------- Body / Questions ---------- */
