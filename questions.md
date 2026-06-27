@@ -1,0 +1,53 @@
+# Autograph Hunter
+
+- Finde jemanden, der dieses Jahr schon mal einen Commit gepusht hat.
+- Finde jemanden, der mit Maike an der gleichen Schule arbeitet.
+- Finde jemanden, der Open-Source-Software betreut.
+- Finde jemanden, der dieses Jahr schon mal ein Instrument gespielt hat.
+- Finde jemanden, der schon mal mit Kenny zusammen Software geschrieben hat.
+- Finde jemanden, der mit Maike und Kenny gemeinsam schon mal Silvester gefeiert hat.
+- Finde jemanden, aus Maikes Familie, der noch keine zehn Jahre alt ist.
+- Finde jemanden, der mit Maike gemeinsam studiert hat.
+- Finde jemanden, der mit Maike schon mal einen Ausritt gemacht hat.
+- Finde jemanden, der mit Kenny und Maike gemeinsam einen Spieleabend gemacht hat.
+- Finde jemanden, der mit Maike und Kenny schon einmal gemeinsam ein Krimi-Dinner gemacht hat.
+- Finde jemanden, der mit Kenny und Maike zusammen essen gegangen ist in einem Restaurant.
+- Finde jemanden, der in Sachsen geboren ist.
+- Finde jemanden, der eine weitere Anreise als 400 km hat.
+- Finde jemanden, der mit Maike und Kenny schon gemeinsam wandern war.
+- Finde jemanden, der einen von beiden schon über 20 Jahre kennt.
+- Finde jemanden, der Bayerischen Dialekt spricht.
+- Finde jemanden, der schon mal im beruflichen Kontext einen Vortrag gehalten hat.
+- Finde jemanden, der einen Purzelbaum machen kann.
+- Finde jemanden, der in die Grundschule geht.
+- Finde jemanden, der mit Kenny in die Schule gegangen ist.
+- Finde jemanden, der mit Maike und Kenny schon gemeinsam auf dem Spielplatz war.
+- Finde jemanden, der mit Maike schon mal Yoga gemacht hat.
+- Finde jemanden, der schon einmal auf dem Falkenstein war.
+- Finde jemanden, der bei TELIS arbeitet.
+- Finde jemanden, der in der Sofwarebranche arbeitet.
+- Finde jemanden, der schon mit Kenny und Maike auf der Dult war.
+- Finde jemanden, der gern Metal Musik hört.
+- Finde jemanden, mit dem Kenny schon einmal Whiskey getrunken hat.
+- Finde jemanden, der schon mal mit in der Dübener Heide auf dem Zeltplatz war.
+- Finde jemanden, der mit Maike Marmelade eingekocht hat.
+- Finde jemanden, der mit Maike schon mal im Garten gearbeitet hat.
+- Finde jemanden, der Kenny und Maike schon mal in der Würzburger Straße besucht hat.
+- Finde jemanden, der schon mal von Kenny und Maike zusammen Besuch bekommen hat.
+- Finde jemanden, der mit Kenny oder Maike schon einmal im Ausland war.
+- Finde jemanden, der seinen eigenen Geburtstag schon mit Kenny und Maike gemeinsam gefeiert hat.
+- Finde jemanden, der geheiratet hat und Kenny und Maike oder einer von beiden war Hochzeitsgast.
+- Finde jemanden, der Kenny und Maike beim Umzug in die Würzburger Straße geholfen hat, und frage was die Person getan hat.
+- Finde jemanden, der bei der standesamtlichen Hochzeit in Regensburg dabei war.
+- Finde jemanden, dem Kenny schon mal Falafelbällchen gemacht hat.
+- Finde jemanden, der mit uns schon mal eine Stadt besichtigt hat. Und welche Stadt?
+- Finde jemanden, der Dieter heißt.
+- Finde jemanden, der Johannes heißt.
+- Finde beide Ursulas.
+- Finde jemanden, der mit Kenny und Maike gemeinsam schon mal Eis gegessen hat.
+- Finde jemanden, der Carmen heißt.
+- Finde jemanden, der in Baden-Württemberg lebt.
+- Finde jemanden, der in einer Band spielt.
+- Finde jemanden, der mit Kenny schon einmal auf einem Festival war. Auf welchem?
+- Finde jemanden, der mit Maike schon einmal auf einem Festival war. Auf welchem?
+- Finde jemanden, der mit Maike und Kenny gemeinsam im Urlaub war.
